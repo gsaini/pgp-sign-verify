@@ -1,6 +1,5 @@
 # PGP Sign & Verify (Streamlit demo)
 
-
 This repository contains a small Streamlit app that demonstrates signing files (detached ASCII-armored signatures) and verifying signatures using PGP keys already present in your GPG keyring.
 
 Files added:
@@ -9,15 +8,16 @@ Files added:
 - `gnupg_utils.py` — small wrapper around `python-gnupg` for listing keys, signing and verification.
 - `requirements.txt` — Python dependencies.
 
-
 Prerequisites
 -------------
 
 - Python 3.14 (see below for setup)
 - GnuPG installed on your machine (the `gpg` binary). On macOS you can run:
-	```bash
-	brew install gnupg
-	```
+
+ ```bash
+ brew install gnupg
+ ```
+
 - **PGP keys must be generated or imported using the terminal (`gpg` CLI) before using this app.**
 
 Install Python dependencies:
@@ -33,7 +33,6 @@ Run the Streamlit app:
 ```bash
 streamlit run app.py
 ```
-
 
 Key management (must be done in terminal)
 -----------------------------------------
@@ -76,12 +75,10 @@ gpg --armor --export "Your Name <you@example.com>" > public.asc
 gpg --armor --export-secret-keys "Your Name <you@example.com>" > private.asc
 ```
 
-
 Security
 --------
 
 This app writes uploaded files and signatures to temporary files to interact with the local `gpg` installation. Do not run it on untrusted networks if you are using real private keys without additional safeguards.
-
 
 Limitations
 -----------
@@ -89,8 +86,8 @@ Limitations
 - The app uses the system GnuPG (so GPG must be installed).
 - The `python-gnupg` library wraps gpg and interacts with a local keyring; behavior may vary depending on gpg version and configuration.
 
-
 If you want, I can:
+
 - Add an option to run a private GPG home inside the app (isolated keyring).
 - Add unit tests for the helper functions.
 - Provide a Dockerfile that contains GnuPG and runs the Streamlit app.
