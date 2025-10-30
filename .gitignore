@@ -1,0 +1,25 @@
+# Python cache/build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+env/
+venv/
+
+# Testing
+.pytest_cache/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# GPG / key material - don't commit private keys
+*.asc
+.gnupg/

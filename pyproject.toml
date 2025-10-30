@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pgp-sign-verify"
+version = "0.1.0"
+description = "Streamlit demo for PGP sign & verify"
+requires-python = ">=3.14,<3.15"
+
+[tool.poetry.dependencies]
+python = ">=3.14,<3.15"
